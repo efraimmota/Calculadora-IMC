@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+}
+
+:root {
+    font-size: 64%;
+}
+
+.container{
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+body{
+    background: #040924;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.title{
+    font-size: 2.5rem;
+    line-height: 4rem;
+}
+
+.card {
+    margin-inline: auto;
+    margin-top: -12rem;
+    background-color: white;
+    max-width: 350px;
+    border-radius: 6px;
+    padding: 48px 64px 64px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.116);
+}
+
+
+form h1{
+    margin-bottom: 3.2rem;
+}
+
+form input {
+    width: 100%;
+    background-color: rgb(230, 230, 230);
+    border: 1px solid var(--t-label);
+    height: 4rem;
+    padding: 1.6rem;
+    border-radius: 4px;
+}
+
+form input:focus{
+    outline: 1px solid gray;
+}
+
+form input::placeholder{
+    color: rgb(173, 173, 173);
+}
+
+form label{
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: var(--t-label);
+    margin-bottom: .8rem;
+    margin-top: 2rem;
+    display: block;
+}
+
+form button {
+    margin-top: 32px;
+    width: 100%;
+    border: none;
+    background-color: #5669d4;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+form button:hover{
+    background-color: #1b2b97;
+    
+}
+
+
+/* MODAL */
+.modal-wrapper.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-wrapper{
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.7);
+
+    display: grid;
+    place-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal{
+    position: relative;
+}
+
+.modal button {
+    background: none;
+    border: none;
+
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+
+    cursor: pointer;
+    transition: transform .3s;
+}
+
+.modal img {
+    width: 13px;
+}
+
+.modal button:hover {
+    transform: scale(1.1);
+    
+}
+
+/* ALERT BOX */
+
+.alert-error.open {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.alert-error{
+    position: absolute;
+    background-color: rgb(128, 6, 6);
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    padding: .8rem 0;
+    font-weight: bold;
+    font-size: 1.3rem;
+    font-family: Arial, Helvetica, sans-serif, Courier, monospace;
+
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: transform .5s;
+}
